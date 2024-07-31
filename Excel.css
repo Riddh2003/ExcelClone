@@ -76,7 +76,7 @@ body{
 
 /* Formula Bar */
 .formula-bar{
-    height: 5vh;
+    height: 4vh;
 }
 
 /* Cell Bar */
@@ -97,7 +97,7 @@ body{
     cursor:default;
 }
 .cell-row-bar{
-    height: 70vh;
+    min-height: 70vh;
     width: 100vb;
 }
 .cell-row{
@@ -118,7 +118,7 @@ body{
 }
 .row-name{
     width: 25px;
-    height: 2.5vh;
+    min-height: 2.5vh;
     font-size: small;
     font-weight: 600;
     border-bottom: 1px solid black;
@@ -127,15 +127,13 @@ body{
     align-items: center;
 }
 .cell{
-    height: 70vh;
+    min-height: 70vh;
     width: calc(100vb - 25px);
 }
 .cell .row{
     min-height: 2.5vh;
 }
 .cell .row .box{
-    display: flex;
-    justify-content: center;
     border-bottom: 1px solid #c4c4c4;
     border-right: 1px solid #c4c4c4;
     min-width: 100px;
