@@ -13,7 +13,7 @@ body{
 }
 
 .title-bar{
-    height: 4.5vh;
+    height: 5vh;
 }
 
 /* Menu */
@@ -73,15 +73,18 @@ body{
 #colorPicker {
     display: none;
 }
+.menu-icon.selected{
+    background-color: #e2e2e2;
+}
 
 /* Formula Bar */
 .formula-bar{
-    height: 4vh;
+    height: 5vh;
 }
 
 /* Cell Bar */
 .cell-bar{
-    height: 75vh;
+    height: calc(100vh - 25vh);
 }
 .cell-col-bar{
     border-bottom: 1px solid black;
@@ -138,6 +141,13 @@ body{
     border-right: 1px solid #c4c4c4;
     min-width: 100px;
     height: 2.5vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    padding: 1px;
+}
+.cell .row .box.selected{
+    border: 2px solid #227447;
 }
 
 

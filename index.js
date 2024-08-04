@@ -24,9 +24,23 @@ $(document).ready(function() {
     let row = $(`<div class="row"></div>`);
     for(let j = 1; j < 100; j++){
       let colcod = $(`#colcod-${j}`).attr("id").split("cod-")[1];
-      let box = $(`<div class="box" contenteditable="true" id="rowId-${i}-colId-${j}" data="colcod-${colcod}"></div>`);
+      let box = $(`<div class="box" contenteditable="false" id="rowId-${i}-colId-${j}" data="colcod-${colcod}"></div>`);
       row.append(box);
     }
     $(`.cell`).append(row);
   }
+
+  $('.align-icon').click(function(){
+    $('.align-icon.selected').removeClass('selected');
+    $(this).addClass('selected');
+  });
+
+  $('.style-icon').click(function(){
+    $(this).toggleClass('selected');
+  });
+
+  $('.cell .row .box').click(function(){
+    $('.box.selected').removeClass('selected');
+    $(this).addClass('selected');
+  });
 });
