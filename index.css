@@ -85,6 +85,7 @@ body{
 /* Cell Bar */
 .cell-bar{
     height: calc(100vh - 25vh);
+    width: 100vw;
 }
 .cell-col-bar{
     border-bottom: 1px solid black;
@@ -101,7 +102,7 @@ body{
 }
 .cell-row-bar{
     min-height: 70vh;
-    width: 100vb;
+    width: 100vw;
 }
 .cell-row{
     min-height: 70vh;
@@ -110,7 +111,7 @@ body{
     overflow: hidden;
 }
 .cell-col-bar .column-name{
-    width: 100px;
+    min-width: 100px;
     height: 2.5vh;
     border-right: 1px solid black;
     display: flex;
@@ -118,6 +119,10 @@ body{
     align-items: center;
     font-size: small;
     font-weight: 600;
+}
+.cell-col{
+    overflow: hidden;
+    width: calc(100vw - 25px);
 }
 .row-name{
     width: 25px;
@@ -131,7 +136,8 @@ body{
 }
 .cell{
     min-height: 70vh;
-    width: calc(100vb - 25px);
+    width: 100vw;
+    overflow: scroll;
 }
 .cell .row{
     min-height: 2.5vh;
@@ -149,7 +155,18 @@ body{
 .cell .row .box.selected{
     border: 2px solid #227447;
 }
-
+.cell .row .box.box-top-selected{
+    border-top: none;
+}
+.cell .row .box.box-bottom-selected{
+    border-bottom: 1px solid #c4c4c4;
+}
+.cell .row .box.box-left-selected{
+    border-left: none;
+}
+.cell .row .box.box-right-selected{
+    border-right: 1px solid #c4c4c4;
+}
 
 
 /* Sheet Bar */
